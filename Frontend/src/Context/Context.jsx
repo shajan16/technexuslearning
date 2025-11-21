@@ -5,7 +5,7 @@ export const UserContext = createContext();
 export const Provider = ({ children }) => {
 
   // Server-URL
-  const URL="https://technexuslearning-server.onrender.com"
+  const URL="http://localhost:4000";
 
   const [username, setUsername] = useState(()=> localStorage.getItem("username")|| "");
   const [staffname, setStaffname] = useState(() => localStorage.getItem("staffname") || "");
