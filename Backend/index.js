@@ -34,7 +34,9 @@ const Port = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json())
-app.use(cors());
+app.use(cors({
+    origin: "*"
+}));
 app.use(express.urlencoded({extended:true}))
 app.use("/uploadimage",express.static(path.join(__dirname,"uploads")));
 app.use("/uploadpartner",express.static(path.join(__dirname,"uploads")));
