@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Mentor */
+@keyframes moving {
+    from{
+        transform:translateX(0);
+    }
+    to{
+        transform:translateX(-170%);
+    }  
+    
+}
+.moving{
+    animation:moving 25s linear infinite;
+}
+/* .allmove:hover .moving{
+    animation-play-state: paused;
+} */
+
+@layer utilities{
+    .paused{
+        animation-play-state: paused;
+    }
+}
+
+/* First-Page */
+@keyframes sideleft{
+    from{
+        transform: translateX(-100%);
+        
+    }
+    to{
+        transform: translateX(0);
+        
+    }
+}
+.animate-sideleft{
+    animation: sideleft 2s ease-out forwards;
+}
+
+@keyframes sideright{
+    from{
+        transform: translateX(100%);
+        
+    }
+    to{
+        transform: translateX(0);
+    }
+}
+.animate-sideright{
+    animation: sideright 2s ease-out forwards;
+}
+
+/* Service */
+.imgrotate{
+    animation: autorotate;
+    animation-timeline: view();
+}
+
+@keyframes autorotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
